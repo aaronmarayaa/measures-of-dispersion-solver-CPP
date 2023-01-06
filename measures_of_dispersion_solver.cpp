@@ -22,6 +22,16 @@ int main(){
     }
     mean = data_times_frequency / sum_of_frequency;
     mean = floor(mean * 100 + 0.5) / 100;
-    cout << mean;
+
+    float data_minus_mean;
+    float data_minus_mean_squared;
+    float data_minus_mean_squared_times_frequency;
+    for(int k = 0; k < num_of_data; k++){
+        data_minus_mean = data[k] - mean;
+        data_minus_mean = floor(data_minus_mean * 100 + 0.5) / 100;
+        data_minus_mean_squared = pow(data_minus_mean, 2);
+        data_minus_mean_squared_times_frequency = data_minus_mean_squared * frequency[k];
+
+    }
     return 0;
 }
