@@ -31,6 +31,10 @@ int main(){
         data_minus_mean = floor(data_minus_mean * 100 + 0.5) / 100;
         data_minus_mean_squared = pow(data_minus_mean, 2);
         data_minus_mean_squared_times_frequency = data_minus_mean_squared * frequency[k];
+        
+        cout << data[k] << "   -   " << frequency[k] 
+            << "   -   " << data_minus_mean << "   -   " 
+            << data_minus_mean_squared << "   -   " << data_minus_mean_squared_times_frequency << endl; 
 
     }
     return 0;
