@@ -11,7 +11,7 @@ void standard_deviation_and_variance(float sum_of_data_minus_mean_squared_times_
 
 int main(){
     cout << "How many data? ";
-    int num_of_data;
+    int num_of_data = 0;
     cin >> num_of_data;
     float data[num_of_data];
     float frequency[num_of_data];
@@ -30,9 +30,9 @@ int main(){
     mean = data_times_frequency / sum_of_frequency;
     mean = floor(mean * 100 + 0.5) / 100;
 
-    float data_minus_mean;
-    float data_minus_mean_squared;
-    float data_minus_mean_squared_times_frequency;
+    float data_minus_mean = 0;
+    float data_minus_mean_squared = 0;
+    float data_minus_mean_squared_times_frequency = 0;
     float sum_of_data_minus_mean_squared_times_frequency = 0;
     for(int k = 0; k < num_of_data; k++){
         data_minus_mean = data[k] - mean;
