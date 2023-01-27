@@ -34,6 +34,7 @@ int main(){
     float data_minus_mean_squared = 0;
     float data_minus_mean_squared_times_frequency = 0;
     float sum_of_data_minus_mean_squared_times_frequency = 0;
+    cout << endl;
     for(int k = 0; k < num_of_data; k++){
         data_minus_mean = data[k] - mean;
         data_minus_mean = floor(data_minus_mean * 100 + 0.5) / 100;
@@ -42,7 +43,7 @@ int main(){
         
         cout << data[k] << "    -    " << frequency[k] 
             << "    -    " << data_minus_mean << "    -    " 
-            << data_minus_mean_squared << "    -    " << data_minus_mean_squared_times_frequency << endl; 
+            << data_minus_mean_squared << "     -      " << data_minus_mean_squared_times_frequency << endl; 
 
         sum_of_data_minus_mean_squared_times_frequency += data_minus_mean_squared_times_frequency;
     }
