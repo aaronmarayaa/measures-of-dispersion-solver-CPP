@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 void standard_deviation_and_variance(float sum_of_data_minus_mean_squared_times_frequency, float sum_of_frequency){
@@ -40,12 +41,8 @@ int main(){
         data_minus_mean = floor(data_minus_mean * 100 + 0.5) / 100;
         data_minus_mean_squared = pow(data_minus_mean, 2);
         data_minus_mean_squared_times_frequency = data_minus_mean_squared * frequency[k];
-        
-        cout << data[k] << "    -    " << frequency[k] 
-            << "    -    " << data_minus_mean << "    -    " 
-            << data_minus_mean_squared << "     -      " << data_minus_mean_squared_times_frequency << endl; 
 
-        sum_of_data_minus_mean_squared_times_frequency += data_minus_mean_squared_times_frequency;
+        printf("%g  -  %2g  -  %5g  -  %5g  -  %5g \n", data[k], frequency[k], data_minus_mean, data_minus_mean_squared, data_minus_mean_squared_times_frequency);
     }
     cout << "\nsum of (data - mean) * frequency = " << sum_of_data_minus_mean_squared_times_frequency << endl;
     cout << "n = " << sum_of_frequency << endl;
